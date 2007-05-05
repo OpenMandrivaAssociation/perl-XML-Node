@@ -1,6 +1,6 @@
 %define module 	XML-Node
 %define version 0.11
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary: Node-based XML parsing: an simplified interface to XML::Parser
 Name: 		perl-%{module}
@@ -15,7 +15,6 @@ BuildRequires:	perl(XML::Parser)
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildArch:	noarch
 
-
 %description
 Using XML::Node, you can easily ignore the parts of XML files that you
 are not interested in, thus helping in simplify Perl scripts
@@ -27,7 +26,6 @@ significantly.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix} 
 %{__make}
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
