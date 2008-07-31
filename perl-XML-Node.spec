@@ -1,6 +1,6 @@
 %define module 	XML-Node
 %define version 0.11
-%define release %mkrel 9
+%define release %mkrel 10
 
 Summary: Node-based XML parsing: an simplified interface to XML::Parser
 Name: 		perl-%{module}
