@@ -1,15 +1,13 @@
 %define upstream_name 	 XML-Node
-%define upstream_version 0.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.11
+Release:	6
 
 Summary:	Node-based XML parsing: an simplified interface to XML::Parser
 License:	Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/XML-Node
-Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHANG-LIU/XML-Node-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHANG-LIU/XML-Node-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ are not interested in, thus helping in simplify Perl scripts
 significantly.
 
 %prep
-%setup -q  -n %{upstream_name}-%{upstream_version}
+%setup -q  -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix} 
@@ -39,9 +37,7 @@ make PREFIX=%{buildroot}%{_prefix} install
 %changelog
 * Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.110.0-1mdv2010.0
 + Revision: 401857
-- rebuild using %%perl_convert_version
-
-* Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.11-10mdv2009.0
+- rebuild using %0.11 Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.11-10mdv2009.0
 + Revision: 258844
 - rebuild
 
