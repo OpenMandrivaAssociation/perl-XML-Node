@@ -2,7 +2,7 @@
 %define upstream_version 0.11
 Name:		perl-%{upstream_name}
 Version:	0.11
-Release:	2
+Release:	3
 
 Summary:	Node-based XML parsing: an simplified interface to XML::Parser
 License:	Artistic
@@ -21,7 +21,7 @@ are not interested in, thus helping in simplify Perl scripts
 significantly.
 
 %prep
-%setup -q  -n XML-Node-0.11
+%setup -q -n XML-Node-0.11
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix} 
@@ -29,6 +29,9 @@ make
 
 %install
 make PREFIX=%{buildroot}%{_prefix} install
+
+%check
+make test || :
 
 %files
 %doc README MANIFEST Changes
